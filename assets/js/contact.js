@@ -12,15 +12,15 @@ $(document).ready(function(){
     $(function() {
         $('#contactForm').validate({
             rules: {
-                name: {
+                nome: {
                     required: true,
                     minlength: 2
                 },
-                subject: {
+                assunto: {
                     required: true,
                     minlength: 4
                 },
-                number: {
+                telefone: {
                     required: true,
                     minlength: 5
                 },
@@ -28,30 +28,30 @@ $(document).ready(function(){
                     required: true,
                     email: true
                 },
-                message: {
+                Mensagem: {
                     required: true,
                     minlength: 20
                 }
             },
             messages: {
-                name: {
-                    required: "come on, you have a name, don't you?",
-                    minlength: "your name must consist of at least 2 characters"
+                nome: {
+                    required: "Você tem um nome, não é?",
+                    minlength: "Seu nome deve ter pelo menos 2 caracteres"
                 },
-                subject: {
-                    required: "come on, you have a subject, don't you?",
-                    minlength: "your subject must consist of at least 4 characters"
+                assunto: {
+                    required: "Você tem um assunto, não é?",
+                    minlength: "Seu assunto deve ter pelo menos 4 caracteres"
                 },
-                number: {
-                    required: "come on, you have a number, don't you?",
-                    minlength: "your Number must consist of at least 5 characters"
+                telefone: {
+                    required: "Você tem um número de whatsapp, não é?",
+                    minlength: "Seu número deve ter pelo menos 11 caracteres"
                 },
                 email: {
-                    required: "no email, no message"
+                    required: "Sem E-mail, sem mensagem."
                 },
-                message: {
-                    required: "um...yea, you have to write something to send this form.",
-                    minlength: "thats all? really?"
+                Mensagem: {
+                    required: "Você tem que escrever algo para enviar este formulário.",
+                    minlength: "Só isso? sério?"
                 }
             },
             submitHandler: function(form) {
