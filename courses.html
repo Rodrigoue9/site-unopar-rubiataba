@@ -118,10 +118,864 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8">
                         <div class="section-tittle text-center mb-55">
-                            <h2>Nossos Cursos em Destaque</h2>
+                            <h2>Lista de cursos</h2>
+                            <p>Pesquise seu curso e click para mais informações</p>
                         </div>
                     </div>
                 </div>
+                <style> body {
+                    font-family: 'lato', sans-serif;
+                  }
+                  
+                  .ceara-container {
+                    max-width: 1000px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                  }
+                  
+                  .ceara-container h2 {
+                    font-size: 26px;
+                    margin: 20px 0;
+                    text-align: center;
+                  }
+                  
+                  .ceara-container h2 small {
+                    font-size: 0.5em;
+                  }
+                  
+                  .ceara-responsive-table {
+                    list-style: none;
+                    padding: 0;
+                  }
+                  
+                  .ceara-responsive-table li {
+                    border-radius: 3px;
+                    padding: 15px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                  }
+                  
+                  .ceara-responsive-table .ceara-table-header {
+                    background-color: #95A5A6;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.03em;
+                  }
+                  
+                  .ceara-responsive-table .ceara-table-row {
+                    background-color: #ffffff;
+                    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+                  }
+                  
+                  .ceara-responsive-table .ceara-col-1 {
+                    flex-basis: 20%;
+                  }
+                  
+                  .ceara-responsive-table .ceara-col-2 {
+                    flex-basis: 60%;
+                  }
+                  
+                  .ceara-responsive-table .ceara-col-3 {
+                    flex-basis: 20%;
+                  }
+                  
+                
+                  
+                  @media all and (max-width: 767px) {
+                    .ceara-responsive-table .ceara-table-header {
+                      display: none;
+                    }
+                  
+                    .ceara-responsive-table li {
+                      display: block;
+                    }
+                  
+                    .ceara-responsive-table .ceara-col {
+                      flex-basis: 100%;
+                      display: flex;
+              
+                    }
+                  
+                    .ceara-responsive-table .ceara-col:before {
+                      color: #6C7A89;
+                      padding-right: 10px;
+                      content: attr(data-label);
+                      flex-basis: 50%;
+                      text-align: right;
+                    }
+                  }
+                
+                .text-ceara{
+                    text-decoration: none; /* Remove o sublinhado */
+                    
+                }
+                .bacharelado{
+                    color: white;
+                    background-color: #6174ff !important;
+                    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+                }
+                .licenciatura{
+                    color: white;
+                    background-color: #bf6bff !important;
+                    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+                }
+                .tecnologo{
+                    color: white;
+                    background-color: #ec67ff !important;
+                    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+                }
+                .ceara-table-row {
+                    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Suaviza a animação */
+                }
+                
+                .ceara-table-row:hover {
+                    transform: scale(1.05); /* Aplica um leve zoom */
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao redor */
+                    background-color: #f8f9fa; /* Opcional: muda o fundo no hover */
+                    cursor: pointer;
+                }
+                .local-de-pesquisa{
+                width: 100%;
+                
+                box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+                padding: 10px 15px;
+                margin-bottom: 15px;
+                background-color: white;
+                border-radius: 5px; /* Bordas arredondadas */
+                font-size: 16px;
+                
+                transition: all 0.3s ease-in-out;
+                }
+                </style>
+                <body>
+                   
+                
+                  <div class="ceara-container">
+                    <input type="text" id="searchInput" placeholder="Buscar curso..." onkeyup="filterCourses()" class="local-de-pesquisa">
+                    <ul class="ceara-responsive-table">
+                        <li class="ceara-table-header">
+                            <div class="ceara-col ceara-col-1">Tipo</div>
+                            <div class="ceara-col ceara-col-2">Nome</div>
+                            <div class="ceara-col ceara-col-3">Duração</div>
+                        </li>
+                 <!-- Cursos Bacharelados -->
+                 <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Agronomia." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Agronomia</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Administração." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Administração</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Administração Pública." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Administração Pública</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Ciências Contábeis." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Ciências Contábeis</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Ciências Econômicas." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Ciências Econômicas</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Ciência da Computação." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Ciência da Computação</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">3,5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Criminologia." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Criminologia</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">3 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Design." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Design</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">3 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Enfermagem." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Enfermagem</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Educação Física." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Educação Física</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia Da Computação." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia Da Computação</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia Civil." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia Civil</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia De Produção." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia De Produção</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia De Software." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia De Software</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">3,5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia Elétrica." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia Elétrica</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia Mecânica." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia Mecânica</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Jornalismo." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Jornalismo</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Publicidade e Propaganda." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Publicidade e Propaganda</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Química." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Química</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">3 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Serviço Social." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Serviço Social</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Sistemas de Informação." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Sistemas de Informação</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">3,5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Teologia." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Teologia</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia Sanitária." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia Sanitária</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia Ambiental." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia Ambiental</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Engenharia De Controle E Automação." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Engenharia De Controle E Automação</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">5 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Psicopedagogia." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Psicopedagogia</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">3 anos</div>
+                  </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Relações Internacionais." class="text-ceara">
+                  <li class="ceara-table-row bacharelado">
+                      <div class="ceara-col ceara-col-1 text-ceara">Bacharelado</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Relações Internacionais</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                
+                <!-- Cursos Licenciaturas -->
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Artes Visuais." class="text-ceara">
+                  <li class="ceara-table-row licenciatura">
+                      <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                      <div class="ceara-col ceara-col-2 text-ceara">Artes Visuais</div>
+                      <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                  </li>
+                </a>
+                <!-- Repetir para os demais cursos de licenciatura -->
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Educação Física." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Educação Física</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Educação Especial." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Educação Especial</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Filosofia." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Filosofia</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Geografia." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Geografia</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de História." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">História</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Letras - Português." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Letras - Português</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Letras - Português e Espanhol." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Letras - Português e Espanhol</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Letras - Português e Inglês." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Letras - Português e Inglês</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Matemática." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Matemática</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Pedagogia." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Pedagogia</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Sociologia." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Sociologia</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">4 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de 2ª Licenciatura." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">2ª Licenciatura</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">1,5 anos</div>
+                </li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Formação Pedagógica." class="text-ceara">
+                <li class="ceara-table-row licenciatura">
+                    <div class="ceara-col ceara-col-1 text-ceara">Licenciatura</div>
+                    <div class="ceara-col ceara-col-2 text-ceara">Formação Pedagógica</div>
+                    <div class="ceara-col ceara-col-3 text-ceara">1 ano</div>
+                </li>
+                </a>
+                        <!-- Cursos Tecnólogos -->
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Agronegócio." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Agronegócio</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">3 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Análise e Desenvolvimento De Sistemas." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Análise e Desenvolvimento De Sistemas</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Arquitetura De Dados." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Arquitetura De Dados</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Blockchain, Criptomoedas e Finanças." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Blockchain, Criptomoedas e Finanças</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Cibersegurança." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Cibersegurança</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Ciência De Dados." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Ciência De Dados</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Coaching e Desenvolvimento Humano." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Coaching e Desenvolvimento Humano</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Comércio Exterior." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Comércio Exterior</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Computação Em Nuvem." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Computação Em Nuvem</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Desenvolvimento Back-end." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Desenvolvimento Back-end</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Desenvolvimento Mobile." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Desenvolvimento Mobile</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Desenvolvimento Web." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Desenvolvimento Web</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Design De Moda." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Design De Moda</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Design Gráfico." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Design Gráfico</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Design De Interiores." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Design De Interiores</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Devops." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Devops</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Empreendedorismo." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Empreendedorismo</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Empreendedorismo E Novos Negócios." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Empreendedorismo E Novos Negócios</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Eventos." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Eventos</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Fotografia." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Fotografia</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gerontologia." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gerontologia</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Ambiental." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Ambiental</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Comercial." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Comercial</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Da Inovação." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Da Inovação</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Da Produção Industrial." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Da Produção Industrial</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">3 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Da Qualidade." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Da Qualidade</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Da Tecnologia Da Informação." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Da Tecnologia Da Informação</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão De Cooperativas." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão De Cooperativas</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão De Produto." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão De Produto</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão De Recursos Humanos." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão De Recursos Humanos</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão De Saúde Pública." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão De Saúde Pública</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão De Turismo." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão De Turismo</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Financeira." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Financeira</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Hospitalar." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Hospitalar</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">3 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Portuária." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Portuária</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gastronomia." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gastronomia</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão Pública." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão Pública</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Inteligência De Mercado E Análise De Dados." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Inteligência De Mercado E Análise De Dados</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Investigação E Perícia Criminal." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Investigação E Perícia Criminal</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Jogos Digitais." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Jogos Digitais</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Logística." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Logística</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Marketing." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Marketing</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Marketing Digital." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Marketing Digital</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Mediação." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Mediação</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Negócios Imobiliários." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Negócios Imobiliários</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Processos Gerenciais." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Processos Gerenciais</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Produção Cervejeira." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Produção Cervejeira</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Produção Audiovisual." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Produção Audiovisual</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Redes De Computadores." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Redes De Computadores</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Secretariado." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Secretariado</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Segurança Pública (Apenas Concursados)." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Segurança Pública (Apenas Concursados)</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Gestão de Segurança Privada." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Gestão de Segurança Privada</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Serviços Jurídicos Cartorários E Notariais." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Serviços Jurídicos Cartorários E Notariais</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Sistemas Para Internet." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Sistemas Para Internet</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Segurança da Informação." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Segurança da Informação</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2,5 anos</div>
+                            </li>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+556286273131&text=Olá! Quero informações sobre a graduação de Terapias Integrativas E Complementares." class="text-ceara">
+                            <li class="ceara-table-row tecnologo">
+                                <div class="ceara-col ceara-col-1 text-ceara">Tecnólogo</div>
+                                <div class="ceara-col ceara-col-2 text-ceara">Terapias Integrativas E Complementares</div>
+                                <div class="ceara-col ceara-col-3 text-ceara">2 anos</div>
+                            </li>
+                        </a>
+                
+                       
+                  </ul>
+                </div>
+                    
+                    <script>
+                        function removeAccents(str) {
+                            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove acentos
+                        }
+                        
+                        function filterCourses() {
+                            var input = removeAccents(document.getElementById("searchInput").value.toLowerCase());
+                            var rows = document.querySelectorAll(".ceara-table-row");
+                        
+                            rows.forEach(row => {
+                                var courseName = removeAccents(row.querySelector(".ceara-col-2").textContent.toLowerCase());
+                                if (courseName.includes(input)) {
+                                    row.parentElement.style.display = "block"; // Exibe o link <a>
+                                } else {
+                                    row.parentElement.style.display = "none"; // Oculta o link <a> (junto com <li>)
+                                }
+                            });
+                        }
+                        </script>
+                        <div class="row justify-content-center" style="margin-top: 100px;">
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="section-tittle text-center mb-55">
+                                    <h2>Nossos Cursos em Destaque</h2>
+                                </div>
+                            </div>
+                        </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="properties properties2 mb-30">
